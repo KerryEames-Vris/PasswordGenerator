@@ -15,8 +15,13 @@ function writePassword() {
 
 // create generatePassword function
 function generatePassword() { 
-  var passwordLength = prompt("Please specify password length, between 10 and 120:", "Enter Password Length");
-  
+  var passwordLength = prompt("Please specify password length, between 8 and 128:", "Enter Password Length");
+  if(passwordLength < 8 && passwordLength < 128){
+    alert("Please choose an option between 8 and 128!")
+    generatePassword();
+  } else {
+    confirm("Would you like to use lowercase letters?")
+  }
 } 
 
 
