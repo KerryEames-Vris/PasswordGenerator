@@ -17,10 +17,10 @@ function writePassword() {
 
 // create generatePassword function
 function generatePassword() {
+  //prompt user for length
   var passwordLength = prompt("Please specify password length, between 8 and 128:", "Enter Password Length");
   Number(passwordLength)
   
-  //prompt user for length
   if(passwordLength < 8 || passwordLength > 128 || passwordLength === false){
     // error handling 
     alert("Please choose an option between 8 and 128!")
@@ -45,7 +45,7 @@ var wantSymbols = confirm("Would you like to use symbols?");
   
   
   function newPassword() {
-
+    // if all are true
    if(lowerAlpha === true && upperAlpha === true && wantNumbers === true && wantSymbols === true){
     var result = '';
     var characters = lowerCase + upperCase + numbers + symbols;
@@ -53,9 +53,152 @@ var wantSymbols = confirm("Would you like to use symbols?");
     for ( var i = 0; i < passwordLength; i++ ) {
       result += characters.charAt(Math.floor(Math.random() * 
  charactersLength));
+   } //No Lower
+   return result;
+}else if(lowerAlpha !== true && upperAlpha === true && wantNumbers === true && wantSymbols === true){
+    var result = '';
+    var characters = upperCase + numbers + symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
    }
    return result;
-}
+}  //No Upper
+else if(lowerAlpha === true && upperAlpha !== true && wantNumbers === true && wantSymbols === true){
+    var result = '';
+    var characters = lowerCase + numbers + symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  } //No Lower/Upper
+  else if(lowerAlpha !== true && upperAlpha !== true && wantNumbers === true && wantSymbols === true){
+    var result = '';
+    var characters = numbers + symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  } //No Numbers
+  else if(lowerAlpha === true && upperAlpha === true && wantNumbers !== true && wantSymbols === true){
+    var result = '';
+    var characters = lowerCase + upperCase + symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  } //No Upper/Numbers
+  else if(lowerAlpha === true && upperAlpha !== true && wantNumbers !== true && wantSymbols === true){
+    var result = '';
+    var characters = lowerCase + symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Lower/Numbers
+  else if(lowerAlpha !== true && upperAlpha === true && wantNumbers !== true && wantSymbols === true){
+    var result = '';
+    var characters = upperCase + symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Lower/Upper/Numbers
+  else if(lowerAlpha !== true && upperAlpha !== true && wantNumbers !== true && wantSymbols === true){
+    var result = '';
+    var characters = symbols;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  } //No Symbols
+  else if(lowerAlpha === true && upperAlpha === true && wantNumbers === true && wantSymbols !== true){
+    var result = '';
+    var characters = lowerCase + upperCase + numbers;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Numbers/Symbols
+  else if(lowerAlpha === true && upperAlpha === true && wantNumbers !== true && wantSymbols !== true){
+    var result = '';
+    var characters = lowerCase + upperCase;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Upper/Symbols
+  else if(lowerAlpha === true && upperAlpha !== true && wantNumbers === true && wantSymbols !== true){
+    var result = '';
+    var characters = lowerCase + numbers;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  } //No Lower/Symbols
+  else if(lowerAlpha !== true && upperAlpha === true && wantNumbers === true && wantSymbols !== true){
+    var result = '';
+    var characters = upperCase + numbers;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Lower/Upper/Symbols
+  else if(lowerAlpha !== true && upperAlpha !== true && wantNumbers === true && wantSymbols !== true){
+    var result = '';
+    var characters = numbers;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Lower/Numbers/Symbols
+  else if(lowerAlpha !== true && upperAlpha === true && wantNumbers !== true && wantSymbols !== true){
+    var result = '';
+    var characters = upperCase;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  }//No Upper/Numbers/Symbols
+  else if(lowerAlpha === true && upperAlpha !== true && wantNumbers !== true && wantSymbols !== true){
+    var result = '';
+    var characters = lowerCase;
+    var charactersLength = characters.length;
+    for ( var i = 0; i < passwordLength; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+  } //Error handling
+  else if(lowerAlpha !== true && upperAlpha !== true && wantNumbers !== true && wantSymbols !== true){
+    alert("You must choose at least one group of symbols to be included in your password!")
+    generatePassword();
+  }
   }
 }
 
