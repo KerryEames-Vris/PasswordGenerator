@@ -1,7 +1,7 @@
 # PasswordGenerator
 
 ## Description
-I wanted to create a generate for new passwords. I wanted to be able to specify a length, and what kind of symbols enter it. Then I wanted it to generate a completely random, brand new password everytime. Just click generate password and a string of characters is generated and presented to the user
+I wanted to create a generator for new passwords. I wanted to be able to specify a length, and what kind of symbols enter it. Then I wanted it to generate a completely random, brand new password everytime. Just click generate password and a string of characters is generated and presented to the user
 
 ## Installation
 1. Select the clone option from the repository page and copy the SSH link.
