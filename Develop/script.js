@@ -20,7 +20,7 @@ function generatePassword() {
   //prompt user for length
   var passwordLength = prompt("Please specify password length, between 8 and 128:", "Enter Password Length");
   Number(passwordLength)
-  
+  //I ran out of time to figure out how to make this reject anything that wasnt a number, and I tried for a while.
   if(passwordLength < 8 || passwordLength > 128 || passwordLength === false){
     // error handling 
     alert("Please choose an option between 8 and 128!")
