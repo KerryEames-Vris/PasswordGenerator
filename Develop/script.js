@@ -20,9 +20,13 @@ function generatePassword() {
     alert("Please choose an option between 8 and 128!")
     generatePassword();
   } else {
-    confirm("Would you like to use lowercase letters?")
-  }
-} 
+    var lowerAlpha = confirm("Would you like to use lowercase letters?")
+  };
+  var upperAlpha = confirm("Would you like to use uppercase letters?");
+  var wantNumbers = confirm("Would you like to use numbers?");
+  var wantSymbols = confirm("Would you like to use symbols?");
+}
+ 
 
 
 
